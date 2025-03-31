@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+      @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+      @apply min-h-screen;
+      font-family: var(--font-inter);
+    }
+
+    code, pre {
+      font-family: var(--font-jetbrains-mono);
+    }
+  }
