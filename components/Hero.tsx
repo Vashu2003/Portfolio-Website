@@ -15,7 +15,7 @@ const titles = [
   "Tech Enthusiast",
 ];
 
-export function Hero() {
+export default function Hero() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [scope, animate] = useAnimate<HTMLDivElement>();
   const [isTyping, setIsTyping] = useState(false);

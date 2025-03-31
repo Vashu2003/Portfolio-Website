@@ -1,23 +1,18 @@
 import type { Metadata } from 'next'
-import { Inter, JetBrains_Mono } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import ClientProvider from './providers/client'
-import Header from '@/components/Header'
-import { ThemeProvider } from '@/components/theme-provider'
+import Header from '../components/Header'
+import { ThemeProvider } from '../components/theme-provider'
 
 const inter = Inter({ 
   subsets: ['latin'],
-  variable: '--font-inter',
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
+  variable: '--font-inter'
 })
 
 export const metadata: Metadata = {
-  title: 'My Portfolio',
-  description: 'A showcase of my work',
+  title: 'Vashu Singh | Portfolio',
+  description: 'Portfolio website of Vashu Singh',
   icons: {
     icon: '/assets/favicon.png',
   },
@@ -25,15 +20,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode
-}) {
+}>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className="font-sans">
       <head>
         <link rel="icon" type="image/png" href="/assets/favicon.png" />
       </head>
-      <body suppressHydrationWarning>
+      <body className={`${inter.variable} antialiased`}>
         <ClientProvider>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
