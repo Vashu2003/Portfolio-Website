@@ -94,7 +94,7 @@ export default function Header() {
         <div className="flex justify-between h-[10vh] items-center">
           <Link
             href="/"
-            className="text-2xl font-bold text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-[var(--font-jetbrains-mono)]"
+            className="text-2xl font-bold text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-mono"
           >
             My Portfolio
           </Link>
