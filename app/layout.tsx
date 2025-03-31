@@ -18,6 +18,9 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'My Portfolio',
   description: 'A showcase of my work',
+  icons: {
+    icon: '/assets/favicon.png',
+  },
 }
 
 export default function RootLayout({
@@ -27,6 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+      <head>
+        <link rel="icon" type="image/png" href="/assets/favicon.png" />
+      </head>
       <body suppressHydrationWarning>
         <ClientProvider>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

@@ -91,7 +91,7 @@ export default function Header() {
       ref={menuRef}
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20 items-center">
+        <div className="flex justify-between h-[10vh] items-center">
           <Link
             href="/"
             className="text-2xl font-bold text-gray-900 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-[var(--font-jetbrains-mono)]"
